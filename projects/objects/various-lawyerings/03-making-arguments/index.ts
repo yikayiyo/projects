@@ -1,5 +1,32 @@
 // Write your types here! ✨
-
+type Motion = {
+	from: "defendant" | "plaintiff";
+	reason: string;
+} & (
+	| {
+			status: "allowed";
+			deliberationHours?: number;
+	  }
+	| {
+			status: "denied";
+			deliberationHours?: number;
+			annoyedJustice: boolean;
+	  }
+	| {
+			status: "pending";
+			estimatedDeliberationHours: number;
+	  }
+) &
+	(
+		| {
+				step: "post-trial";
+				classification: "acquittal" | "correction" | "new trial";
+		  }
+		| {
+				step: "pre-trial";
+				classification: "suppress" | "dismiss" | "venue";
+		  }
+	);
 export const motions: Motion[] = [
 	{
 		annoyedJustice: true,

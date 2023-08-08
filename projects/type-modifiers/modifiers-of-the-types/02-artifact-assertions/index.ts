@@ -21,3 +21,17 @@ const artifacts = {
 		type: "sword",
 	},
 };
+
+export type PossibleType = "magic" | "fortress" | "device" | "sword";
+
+export type ArtifactName =
+	| "Black Garnet"
+	| "Castle TypeScript"
+	| "Cosmic Key"
+	| "Power Sword"
+	| "Starseed"
+	| "Sword of the Ancients";
+
+export function getArtifactType(artifactName: ArtifactName) {
+	return artifacts[artifactName].type as PossibleType;
+}
