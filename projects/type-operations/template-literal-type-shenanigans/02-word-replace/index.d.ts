@@ -1,6 +1,4 @@
-// Write your WordReplace type here! ✨
-// You'll need to export it so the tests can run it.
-export type WordReplace<
+export declare type WordReplace<
 	Text extends string,
 	Original extends string,
 	Replacement extends string

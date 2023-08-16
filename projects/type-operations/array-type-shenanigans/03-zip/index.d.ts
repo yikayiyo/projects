@@ -1,6 +1,4 @@
-// Write your Zip type here! ✨
-// You'll need to export it so the tests can run it.
-export type Zip<T extends any[], U extends any[]> = T extends [
+export declare type Zip<T extends any[], U extends any[]> = T extends [
 	infer F,
 	...infer R
 ]
